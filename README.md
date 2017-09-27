@@ -1,4 +1,4 @@
-[<p align="center"><img src="doc/logo.png" alt="node-apn" width="450" height="auto"></p>][json-crawler]
+[<p align="center"><img src="doc/logo.png" alt="json-crawler" width="450" height="auto"></p>][json-crawler]
 
 json-crawler
 ========
