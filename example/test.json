@@ -1,0 +1,53 @@
+{
+  "catalog": {
+    "url": "http://animeflv.net/browse",
+    "httpMethod": "get",
+    "startTag": ".ListAnimes li",
+    "pagination": "p",
+    "limit": 20,
+    "scrapper": {
+      "title": ".Title@html",
+      "image": ".Image a img@src",
+      "link": ".Title a@href",
+      "description": ".mCSB_container p@html",
+      "categories": {
+        "startTag": ".Tags a",
+        "scrapper": {
+          "name": "@html",
+          "link": "@href"
+        }
+      }
+    }
+  },
+  "show": {
+    "url": "http://animeflv.net/browse",
+    "httpMethod": "get",
+    "startTag": ".anime_box",
+    "transform": {
+      "type": "<%= type.replace('<b>Tipo:</b> ','') %>",
+      "status": "<%= status.replace('<b>Estado:</b> <span class=\"serie_estado_2\">','').replace('</span>','') %>",
+      "air": "<%= date.replace('<b>Fecha de Inicio:</b> ','') %>"
+    },
+    "scrapper": {
+      "description": ".sinopsis@html",
+      "image": ".portada@src",
+      "type": "ul.ainfo li:first@html",
+      "status": "ul.ainfo li:nth-child(2)@html",
+      "air": "ul.ainfo li:nth-child(4)@html",
+      "categories": {
+        "startTag": "ul.ainfo a",
+        "scrapper": {
+          "name": "@html",
+          "link": "@href"
+        }
+      },
+      "episodes": {
+        "startTag": "ul.anime_episodios li",
+        "scrapper": {
+          "title": "a@html",
+          "link": "a@href"
+        }
+      }
+    }
+  }
+}

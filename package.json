@@ -1,0 +1,46 @@
+{
+  "name": "json-crawler",
+  "version": "1.0.0",
+  "description": "A web crawler with a json configuration file",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "test",
+    "lint": "eslint .",
+    "nsp": "nsp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javi11/json-crawler.git"
+  },
+  "keywords": [
+    "json",
+    "crawler",
+    "web"
+  ],
+  "author": "javicuba11@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javi11/json-crawler/issues"
+  },
+  "homepage": "https://github.com/javi11/json-crawler#readme",
+  "devDependencies": {
+    "eslint": "^4.7.2",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "nsp": "^2.8.0",
+    "prettier": "^1.7.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "bunyan": "^1.8.12",
+    "cheerio": "^1.0.0-rc.2",
+    "cloudscraper": "^1.4.1",
+    "jquery": "^3.2.1",
+    "jsdom": "^11.2.0",
+    "lodash": "^4.17.4",
+    "request": "^2.82.0",
+    "request-promise": "^4.2.2"
+  }
+}
